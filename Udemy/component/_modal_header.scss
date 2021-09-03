@@ -1,0 +1,28 @@
+#modal {
+  .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .modal-dialog {
+    margin: 0;
+    width: 80%;
+    height: 100%;
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
+  }
+  .modal-content {
+    height: 100%;
+    overflow-y: auto;
+  }
+  .fade-left {
+    .modal-dialog {
+      transition: all 1s;
+    }
+  }
+  .fade-left.show .modal-dialog {
+    left: 0;
+  }
+  .dropdown-menu {
+    position: unset;
+  }
+}

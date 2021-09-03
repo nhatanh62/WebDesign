@@ -1,0 +1,211 @@
+//header
+@mixin form($form-color, $fl-grow) {
+  form {
+    flex-grow: $fl-grow;
+  }
+
+  .form-control {
+    font-size: 15px;
+    padding: 20px 12px;
+  }
+
+  .form-input-group input[type="text"] {
+    padding: 20px 12px;
+    background-color: $form-color;
+    border: 1px solid transparent;
+    padding-right: 40px;
+    position: relative;
+    border-radius: 5px;
+  }
+  .form-input-group input[type="text"]:focus {
+    outline: 0;
+    box-shadow: none;
+    border: 1px solid $form-color;
+    background-color: white;
+  }
+
+  .form-input-group {
+    position: relative;
+    .search-button {
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      top: 0;
+      right: 0;
+      width: 10%;
+      position: absolute;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      display: flex;
+      color: $color;
+      i {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        font-variant: normal;
+        text-transform: none;
+      }
+      &:hover {
+        background: $color;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@mixin btn-search() {
+  font-size: 20px;
+  color: $txtcolor;
+}
+
+@mixin btn-bestSeller() {
+  border-radius: 3px;
+  border-top-left-radius: none;
+  border-bottom-left-radius: none;
+  font-size: 9px;
+  padding: 1px 8px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $yellowColor;
+}
+
+//product
+@mixin product() {
+  .product {
+    width: 100%;
+    margin-right: 1rem;
+    position: relative;
+    &:hover {
+      cursor: pointer;
+    }
+    .product__img {
+      position: relative;
+      span {
+        @include btn-bestSeller();
+        position: absolute;
+        top: 15px;
+        left: 0;
+        z-index: 1;
+      }
+      &:hover {
+        opacity: 0.5;
+        background: black;
+        cursor: pointer;
+      }
+    }
+    .product__content {
+      h5 {
+        text-overflow: ellipsis;
+        white-space: normal;
+        font-weight: 700;
+        height: 42px;
+        font-size: 15px;
+        color: #29303b;
+        margin-bottom: 10px;
+      }
+      p {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 12px;
+        color: #686f7a;
+      }
+      .rating {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 2px;
+        margin-top: -2px;
+        background: 0 0;
+        margin-bottom: 10px;
+        .rating-star {
+          color: $yellowColor;
+        }
+        .rating-point {
+          font-weight: 700;
+          color: #505763;
+          span {
+            font-size: 12px;
+            font-weight: 400;
+            color: #686f7a;
+            margin-left: 5px;
+          }
+        }
+      }
+      .product__money {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        .money__before {
+          font-size: 13px;
+          font-weight: 400;
+          padding-right: 0.7rem;
+          text-decoration: line-through;
+        }
+        .money__after {
+          font-size: 18px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+//button
+@mixin btn() {
+  padding: 11px 12px;
+}
+
+//Owl-Carousel
+@mixin owl-nav() {
+  .owl-nav {
+    .owl-prev,
+    .owl-next {
+      &:focus {
+        outline: 0;
+      }
+      width: 50px;
+      height: 50px;
+      background-color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      box-shadow: 0px 3px 3px 0px #ebdfdf;
+      position: absolute;
+      left: -3%;
+      top: 36%;
+      span {
+        font-size: 50px;
+        line-height: 1;
+        color: $channelColor;
+      }
+    }
+    .owl-next {
+      position: absolute;
+      left: auto;
+      right: -1%;
+      top: 36%;
+    }
+    .disabled {
+      visibility: hidden;
+    }
+  }
+  .owl-dots {
+    text-align: center;
+    .owl-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #dedfe0; 
+      margin-right: 1rem;
+    }
+    .owl-dot.active {
+      background-color: #686f7a;
+    }
+  }
+}

@@ -1,0 +1,98 @@
+@mixin overlay__hover {
+  .overlay__hover {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: $overlay-light;
+    border: 20px solid rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.5s;
+    top: 0;
+    &:hover {
+      opacity: 1;
+    }
+    h4 {
+      font-size: 0.9rem;
+      letter-spacing: 3px;
+    }
+    .team-member__social {
+      a {
+        &:hover {
+          i {
+            color: $yellow;
+          }
+        }
+        i {
+          transition: all 0.5s;
+        }
+      }
+    }
+  }
+}
+@mixin btn-black {
+  .btn-black {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    &:hover {
+      background-color: $yellow;
+    }
+  }
+}
+@mixin btn-black2 {
+  .btn-black {
+    color: #fff;
+    background-color: $black2;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    &:hover {
+      background-color: $yellow;
+    }
+  }
+}
+@mixin btn-white($hoverBg, $solid) {
+  .btn-white {
+    color: #222;
+    font-size: 0.9rem;
+    border: 1px solid $solid;
+    background: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1rem 2rem;
+    transition: all 0.3s;
+    &:hover {
+      background-color: $hoverBg;
+      color: #fff;
+    }
+  }
+}
+
+//Owl Carousel
+@mixin owl-carousel($bgDot,$bgDotActive) {
+  .owl-stage {
+    transition: all 800ms ease 0s !important;
+  }
+  .owl-dots {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    .owl-dot {
+      width: 12px;
+      height: 12px;
+      margin: 5px 7px;
+      opacity: 0.5;
+      border-radius: 50%;
+      background-color: $bgDot;
+      // background-color: transparent;
+      border: 1px solid $bgDotActive;
+    }
+    .owl-dot.active {
+      background-color: $bgDotActive;
+    }
+  }
+}

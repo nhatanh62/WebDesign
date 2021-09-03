@@ -1,0 +1,119 @@
+.comment {
+  background-color: #f7f8fa;
+  h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.33em;
+    margin-bottom: 1rem;
+  }
+  @include owl-nav();
+  .owl-prev{
+    left : 2% !important;
+  }
+  .owl-next {
+    right: 4% !important;
+  }
+  .comment__customer {
+    .card {
+      margin-right: 2rem;
+    } 
+  }
+  .customer__item {
+    background-color: #fff;
+    border-radius: 3px;
+    // box-shadow: 0 1px 3px 0 rgb(20 23 28 / 15%);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 260px;
+    padding: 32px;
+    .header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      img {
+        border-radius: 50%;
+        object-fit: cover;
+        max-width: 100%;
+        width: 64px;
+        margin-right: 1rem;
+      }
+      span {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.5em;
+      }
+      .header__img {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background-color: #686f7a;
+        font-weight: 700;
+        line-height: 64px;
+        font-size: 18px;
+        text-align: center;
+        color: white;
+        margin-right: 1rem;
+      }
+    }
+    .content {
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5em;
+      }
+    }
+
+  }
+  .comment__branch {
+    p {
+      font-size: 13px;
+      padding-top: 16px;
+      text-align: center;
+      color: #686f7a;
+    }
+    .branch__logo {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-top: 32px;
+      .logo__item {
+        margin: 0 32px 8px;
+      }
+    }
+    .branch__content {
+      .content__item {
+        padding: 28px 30px;
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+        .item__text {
+          max-width: 400px;
+        }
+        h3 {
+          font-size: 19px;
+          font-weight: 700;
+          line-height: 1.47em;
+          color: #505763;
+        }
+        p {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 1.5em;
+          padding-top: 3px;
+        }
+        a {
+          margin-top: 1em;
+          padding: 11px 12px;
+          font-size: 15px;
+        }
+      }
+      .border--custom {
+        border-right: 1px solid #dedfe0;
+      }
+    }
+  }
+
+  //MEDia SCREEN 
+
+}

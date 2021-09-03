@@ -1,0 +1,184 @@
+.channel {
+  .channel__header {
+    background: linear-gradient(-45deg, #ec5252 0%, #6e1a52 100%);
+    .header__item {
+      display: flex;
+      padding: 20px 25px;
+      :first-child {
+        padding-left: 0;
+      }
+      i {
+        margin-right: 16px;
+        margin-top: -2px;
+        font-size: 47px;
+        height: 1em;
+      }
+      h4 {
+        font-size: 17px;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+  .channel__content {
+    .row {
+      flex-wrap: nowrap;
+    }
+    .content__left {
+      background: #f7f8fa;
+      display: flex;
+      flex: 1 0 auto;
+      flex-direction: column;
+      justify-content: center;
+      margin: 15px 15px 28px 0;
+      padding: 0 32px;
+      h4 {
+        font-size: 19px;
+        font-weight: 700;
+        line-height: 1.47em;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5em;
+      }
+    }
+    .content__right {
+      .nav-pills {
+        border-bottom: 1px solid #dedfe0;
+      }
+      .nav-tabs {
+        justify-content: space-between;
+      }
+      .nav-link {
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        border: 1px solid transparent;
+        white-space: nowrap;
+        padding: 11px 12px;
+        font-size: 15px;
+        line-height: 1.35135;
+        border-radius: 2px;
+        color: black;
+        transition: all 0.5s;
+      }
+      .nav-link:hover {
+        color: $channelColor;
+      }
+      .nav-link.active {
+        background: transparent;
+        position: relative;
+      }
+      .nav-link.active::after {
+        content: "";
+        width: 100%;
+        display: block;
+        height: 5px;
+        background-color: $channelColor;
+        position: absolute;
+        left: 0;
+        top: 3.2rem;
+      }
+      @include owl-nav();
+      .tab-pane {
+        @include product();
+      }
+      .card{
+        margin-right: 1rem;
+        box-shadow: $boxShadow, $boxShadow2;
+        transition: all 0.3s;
+        &:hover {
+          box-shadow: $boxShadow, $boxShadow2,$boxShadowHover; 
+        }
+      }
+    
+    }
+  }
+
+  //MEDIA SCREEN
+  @media screen and(min-width:1200px) and (max-width: 1238px) {
+    .channel__content {
+      .content__right {
+        .nav-item {
+          .nav-link {
+            padding: 11px 10px !important;
+          }
+        }
+      }
+    }
+  }
+  @media screen and(min-width:1200px) and(max-width:1439px) {
+    .channel__content {
+      .content__right {
+        .tab-pane {
+          .product {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  @media screen and(min-width:992px) and(max-width:1199px) {
+    .channel__header {
+      .container--custom {
+        padding: 0;
+      }
+    }
+    .channel__content {
+      .content__right {
+        .nav-link {
+          padding: 11px 5px;
+        }
+      }
+    }
+  }
+  @media screen and(min-width:768px) and(max-width:992px) {
+    .channel__content {
+      .content__right {
+        .owl-nav {
+          .owl-next {
+            right: 0%;
+          }
+        }
+        .nav-link {
+          padding: 11px 5px;
+        }
+      }
+    }
+  }
+  @media screen and(max-width:767px) {
+    
+    .channel__content {
+      width: 100%;
+      .container--custom {
+        
+        width: 100%;
+      }
+      .content__right {
+        .nav-tabs {
+          padding: 0 0.5rem;
+        }
+        .nav-link {
+          padding: 11px 0px;
+        }
+        .card {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+  @media screen and(max-width:575px) {
+    .channel__content {
+      .container--custom {
+        padding: 0 1.5rem;
+        .nav-tabs {
+          .nav-link {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

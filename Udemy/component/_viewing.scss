@@ -1,0 +1,10 @@
+.viewing {
+  h3 {
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.47em;
+    color: #505763;
+  }
+  @include owl-nav();
+  @include product();
+}

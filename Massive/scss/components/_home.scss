@@ -1,0 +1,40 @@
+#home {
+  position: relative;
+  .carousel-indicators {
+    li {
+      background-color: transparent;
+      border: 1px solid $light;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin: auto 5px;
+    }
+    li.active {
+      background-color: $light;
+    }
+  }
+  #carouselId {
+    .carousel-inner {
+      .carousel-item {
+        height: 100vh;
+        background-size: cover;
+        background-position: top center;
+        span {
+          font-size: 1.2rem;
+        }
+      }
+    }
+    .carousel-control-prev {
+      width: 25%;
+      cursor: url("../../img/carousel/arrow_left.png"), auto;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    .carousel-control-next {
+      @extend .carousel-control-prev;
+      cursor: url("../../img/carousel/arrow_right.png"), auto;
+    }
+    
+  }
+}

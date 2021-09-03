@@ -1,0 +1,43 @@
+#carousel {
+  background: url(../img/cover.jpg) no-repeat center;
+  background-size: cover;
+  height: 500px;
+  @include form($main-Color-White-Form, 10);
+  .carousel__content--custom {
+    padding-left: 5rem;
+    padding-right: 15px;
+  }
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.33;
+  }
+  p {
+    font-size: 18px;
+    line-height: 1.61;
+  }
+  .form-control {
+    padding: 2rem 2rem 2rem 1rem;
+    font-size: 1.8rem;
+    font-weight: 100;
+    .input-group-append i {
+      font-size: 1.5rem;
+    }
+  }
+
+  //MEDIA SCREEN
+  @media screen and(min-width:768px) and(max-width:1199px) {
+    .carousel__content--custom {
+      width: 754px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  @media screen and(max-width:767px) {
+    .carousel__content--custom {
+        margin: 0 15px;
+        padding-left: 0;
+        width: 100%;
+    }
+  }
+}
